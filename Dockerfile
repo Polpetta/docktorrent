@@ -59,7 +59,7 @@ RUN build_deps="automake build-essential ca-certificates libc-ares-dev libcppuni
     apt-get autoremove -y
 
 # Install required packages
-RUN apt-get update && apt-get install -q -y --no-install-recommends \
+RUN apt-get install -q -y --no-install-recommends \
     apache2-utils \
     libc-ares2 \
     nginx \
@@ -67,7 +67,7 @@ RUN apt-get update && apt-get install -q -y --no-install-recommends \
     php5-fpm
 
 # Install packages for ruTorrent plugins
-RUN apt-get update && apt-get install -q -y --no-install-recommends \
+RUN apt-get install -q -y --no-install-recommends \
     mediainfo \
     unrar-free \
     unzip
