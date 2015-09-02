@@ -78,6 +78,9 @@ RUN echo "deb http://www.deb-multimedia.org jessie main" >> /etc/apt/sources.lis
     apt-get update && apt-get install -q -y --force-yes --no-install-recommends \
     deb-multimedia-keyring \
     ffmpeg
+    
+# Clean apt-get cache
+RUN apt-get clean
 
 # IMPORTANT: Change the default login/password of ruTorrent before build
 RUN htpasswd -cb /usr/share/nginx/html/rutorrent/.htpasswd docktorrent p@ssw0rd
